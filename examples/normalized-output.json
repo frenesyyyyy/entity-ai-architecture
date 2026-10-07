@@ -1,0 +1,55 @@
+{
+  "schema_version": "illustration-v1",
+  "data_kind": "synthetic",
+  "question_set_version": "example-panel-v1",
+  "observations": [
+    {
+      "provider": "provider-a",
+      "question_id": "q1",
+      "status": "measured",
+      "brand_mentioned": true,
+      "evidence": "Synthetic response: Example Brand is mentioned.",
+      "error": null
+    },
+    {
+      "provider": "provider-a",
+      "question_id": "q2",
+      "status": "measured",
+      "brand_mentioned": false,
+      "evidence": "Synthetic response: no mention of the target brand.",
+      "error": null
+    },
+    {
+      "provider": "provider-a",
+      "question_id": "q3",
+      "status": "failed",
+      "brand_mentioned": null,
+      "evidence": null,
+      "error": "timeout"
+    }
+  ],
+  "provider_summaries": [
+    {
+      "provider": "provider-a",
+      "requested": 3,
+      "measured": 2,
+      "failed": 1,
+      "missing": 0,
+      "mentions": 1,
+      "mention_rate": 0.5,
+      "coverage": 0.6666666666666666,
+      "status": "partial"
+    },
+    {
+      "provider": "provider-b",
+      "requested": 3,
+      "measured": 0,
+      "failed": 0,
+      "missing": 3,
+      "mentions": 0,
+      "mention_rate": null,
+      "coverage": 0.0,
+      "status": "partial"
+    }
+  ]
+}

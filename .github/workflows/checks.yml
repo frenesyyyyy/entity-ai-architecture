@@ -1,0 +1,16 @@
+name: Check public example
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  example:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+      - run: python3 --version
+      - run: python3 -m unittest discover -s tests -v
+      - run: python3 examples/workflow.py
